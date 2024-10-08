@@ -1,8 +1,8 @@
 import React from 'react'
 import hero from '../assets/tophero.png'
-import hero2 from '../assets/hero.png'
+import hero2 from '../assets/top1.png'
 import { FaHSquare } from 'react-icons/fa'
-
+import top from "../assets/top.png"
 const TopHero = () => {
   return (
     <div className='top-hero section-center'>
@@ -14,9 +14,13 @@ const TopHero = () => {
         <div className='overlay'></div>
         <div className='shape top-left'></div>
         <div className='shape bottom-right'></div>
+        <div className='top'>
+          {' '}
+          <img src={top} alt=''  />
+        </div>
         <h2 className='hero-title'>
-          <FaHSquare className='hero-icon' /> {/* Adjust icon size with CSS */}
-          Your Title Here
+          <FaHSquare className='hero-icon' />
+          Let’s work together
         </h2>
       </div>
     </div>

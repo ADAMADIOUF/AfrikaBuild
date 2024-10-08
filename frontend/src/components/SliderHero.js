@@ -4,20 +4,17 @@ const SliderHero = () => {
   const slides = [
     {
       id: 1,
-      image:
-        'https://i.pinimg.com/236x/ba/22/ec/ba22ec0b3b96700849534e692a2d50c1.jpg',
+      image: '../assets/slider1.png',
       text: 'Welcome to Africa Build',
     },
     {
       id: 2,
-      image:
-        'https://i.pinimg.com/236x/14/2c/fa/142cfa3baf7a7ff342e9f8b13f1797d9.jpg',
+      image: '../assets/slider2.png',
       text: 'Quality Construction Services',
     },
     {
       id: 3,
-      image:
-        'https://i.pinimg.com/236x/40/84/e1/4084e1f99c66e56a2d1260d60b1ab76d.jpg',
+      image: '../assets/slider3.png',
       text: 'Building Your Dreams',
     },
   ]
@@ -42,7 +39,7 @@ const SliderHero = () => {
 
   return (
     <>
-      <div className='slider-container'>
+      <div className='slider-container section-center'>
         <div className='slide' key={slides[currentIndex].id}>
           <div className='text'>
             <h3>{slides[currentIndex].text}</h3>
