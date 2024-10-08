@@ -1,13 +1,17 @@
 import React from 'react'
 import SliderHero from './SliderHero'
+import HeroLines from './HeroLines'
 
 const Hero = () => {
   return (
-    <div className='hero'>
-      <SliderHero />
-      {/* Overlay */}
-      <div className='overlay'></div>
-    </div>
+    <>
+      <div className='hero'>
+        <SliderHero />
+
+        <div className='overlay'></div>
+      </div>
+      <HeroLines/>
+    </>
   )
 }
 

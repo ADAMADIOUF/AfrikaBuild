@@ -1,5 +1,5 @@
 import React from 'react'
-import iconone from "../assets/icons1.png"
+
 const Home = () => {
   return (
     <div className='home-page'>
@@ -8,7 +8,7 @@ const Home = () => {
           <article className='first-img'>
             <div className='big-img'>
               <img
-                src='https://html.favdevs.com/construz/demo/assets/img/normal/about_1-1.png'
+                src='https://images.pexels.com/photos/7937366/pexels-photo-7937366.jpeg?auto=compress&cs=tinysrgb&w=600'
                 alt=''
               />
             </div>
@@ -67,7 +67,7 @@ const Home = () => {
                 />
               </div>
               <div>
-                <h3>Our Mission</h3>
+                <h3>Our Vision</h3>
                 <p>
                   We craft unique digital experiences. With more years of
                   expertise we design
@@ -89,6 +89,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
+            <button className='btn'>explore our company</button>
           </article>
           <article className='home-img'>
             <img

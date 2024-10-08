@@ -66,6 +66,7 @@ const SliderHero = () => {
             </button>
           ))}
         </div>
+        
       </div>
     </>
   )
