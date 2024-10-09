@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeServices from '../pages/HomeServices'
 
 const Home = () => {
   return (
@@ -67,7 +68,7 @@ const Home = () => {
                 />
               </div>
               <div>
-                <h3>Our Vision</h3>
+                <h3>Our Mission</h3>
                 <p>
                   We craft unique digital experiences. With more years of
                   expertise we design
@@ -77,12 +78,12 @@ const Home = () => {
             <div className='home-mission'>
               <div>
                 <img
-                  src='https://html.favdevs.com/construz/demo/assets/img/icon/about-grid-icon1-1.svg'
+                  src='https://html.favdevs.com/construz/demo/assets/img/icon/about-grid-icon1-2.svg'
                   alt=''
                 />
               </div>
               <div>
-                <h3>Our Mission</h3>
+                <h3> Our Vision</h3>
                 <p>
                   We craft unique digital experiences. With more years of
                   expertise we design
@@ -99,6 +100,7 @@ const Home = () => {
           </article>
         </div>
       </div>
+      <HomeServices/>
     </div>
   )
 }
