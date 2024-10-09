@@ -2,6 +2,7 @@ import React from 'react'
 import HomeServices from '../pages/HomeServices'
 import HomeChoose from '../pages/HomeChoose'
 import HomeProvider from '../pages/HomeProvider'
+import HomeProjects from '../pages/HomeProjects'
 
 const Home = () => {
   return (
@@ -105,6 +106,7 @@ const Home = () => {
       <HomeServices/>
       <HomeChoose/>
       <HomeProvider/>
+      <HomeProjects/>
     </div>
   )
 }

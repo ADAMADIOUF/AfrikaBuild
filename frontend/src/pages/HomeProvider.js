@@ -42,13 +42,14 @@ const HomeProvider = () => {
               X
             </button>
             <iframe
-              width='100%'
+              width='560'
               height='315'
-              src='https://www.youtube.com/embed/dQw4w9WgXcQ' // Replace with your video URL
+              src='https://www.youtube.com/embed/HzG_2XdR1ds?si=idJveHCmRNzZGYNe'
               title='YouTube video player'
-              frameBorder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              referrerpolicy='strict-origin-when-cross-origin'
+              allowfullscreen
             ></iframe>
           </div>
         </div>
