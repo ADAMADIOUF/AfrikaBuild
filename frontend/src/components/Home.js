@@ -1,5 +1,7 @@
 import React from 'react'
 import HomeServices from '../pages/HomeServices'
+import HomeChoose from '../pages/HomeChoose'
+import HomeProvider from '../pages/HomeProvider'
 
 const Home = () => {
   return (
@@ -101,6 +103,8 @@ const Home = () => {
         </div>
       </div>
       <HomeServices/>
+      <HomeChoose/>
+      <HomeProvider/>
     </div>
   )
 }

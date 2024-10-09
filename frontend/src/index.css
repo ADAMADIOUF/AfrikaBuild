@@ -663,3 +663,225 @@ margin: 1rem;
     gap: 5rem;
   }
 }
+/* HomeChoose */
+.home-choose{
+  margin-top: 5rem;
+  position: relative;
+}
+
+.home-choose-big-text h2{
+  text-align: center;
+  color: var(--clr-primary-5);
+  font-weight: 700;
+  font-size: 10rem;
+  display: none;
+}
+.homechoose-content-container{
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+  overflow: hidden;
+}
+.homechoose-content-container div:hover img {
+  transform: rotateY(-180deg); /* Flip the image to the left on hover */
+}
+.homechoose-content-container article{
+  margin: 2rem;
+}
+.home-choose-img img{
+  width: 100%;
+}
+@media (min-width:992px) {
+  .home-choose-big-text h2{
+    display: block;
+  }
+  .choose-home-title{
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  display: block;
+}
+.choose-home-title h3{
+  font-size: 2rem;
+}
+.home-choose-container{
+  margin-top: 5rem;
+  display: flex;
+  gap: 5rem;
+}
+.homechoose-content-container article{
+  display: flex;
+  gap: 2rem;
+}
+}
+/* HomeProvider */
+.homeprovider {
+  position: relative; /* Required for the pseudo-element to be positioned correctly */
+  background: url("https://images.pexels.com/photos/190417/pexels-photo-190417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center/cover no-repeat;
+  color: var(--clr-white);
+  z-index: 1; /* To ensure the content stays above the overlay */
+  margin-top: -2rem;
+}
+
+.homeprovider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 48, 54,0.5) ;/* Black overlay with 50% opacity */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+.home-provider-title h3 {
+  color: var(--clr-white);
+  font-weight: bold;
+  
+}
+.homeprovider-content{
+  position: relative;
+}
+.home-provider-video {
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.home-provider-video h3{
+  margin: 1rem;
+}
+
+
+
+.icons-video {
+  font-size: 3rem;
+  color: var(--clr-primary-1);
+  background-color: var(--clr-white);
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-popup {
+  background-color: var(--clr-white);
+  padding: 1rem;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-video {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--clr-black);
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+.provider-details{
+  background-color: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  color: var(--clr-black);
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  margin: 1rem;
+}
+.provider-details:hover{
+border: 2px solid var(--clr-primary-1);
+}
+.provider-details:hover span{
+background-color: var(--clr-primary-1);
+}
+.provider-details span{
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.provider-details h2{
+  color: var(--clr-primary-5);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.provider-bg-img img{
+  display: none;
+}
+@media (max-width: 768px) {
+  .iframe {
+    height: 250px;
+  }
+}
+@media (min-width:992px) {
+  .home-provider-video {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  .home-provider-bg1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: var(--clr-primary-1);
+  width: 20rem;
+  height: 4rem;
+clip-path: polygon(0 0, 75% 0%, 100% 0, 75% 100%, 0 99%);
+  animation: moveImage 3s ease-in-out infinite;
+}
+.container-provider{
+  margin-top: 5rem;
+  display: flex;
+ gap: 2rem;
+ z-index: 6;
+ position: relative;
+}
+.provider-details{
+  margin: 0;
+}
+.home-provider-bg2 {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  background-color: var(--clr-primary-1);
+  width: 10rem;
+  height: 4rem;
+clip-path: polygon(0 0, 75% 0%, 100% 0, 75% 100%, 0 99%);
+  animation: moveImage 3s ease-in-out infinite;
+}
+.provider-bg-img img{
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+   animation: moveUpDown 3s ease-in-out infinite; /* Applying the animation */
+ 
+}
+}
