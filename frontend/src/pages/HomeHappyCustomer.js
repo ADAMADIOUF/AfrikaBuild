@@ -17,11 +17,8 @@ const HomeHappyCustomer = () => {
               contact with us <MdOutlineArrowOutward />
             </button>
           </div>
-          
-          <img
-            src={happy}
-            alt=''
-          />
+
+          <img src={happy} alt='' />
         </article>
         <article>
           <div className='title-home'>
@@ -36,6 +33,12 @@ const HomeHappyCustomer = () => {
           <h3>Our happy customers</h3>
           <Testimonial />
         </article>
+      </div>
+      <div className='home-happy-customer-big-img'>
+        <img
+          src='https://html.favdevs.com/construz/demo/assets/img/shape/sec-bg-shape2.png'
+          alt=''
+        />
       </div>
     </div>
   )

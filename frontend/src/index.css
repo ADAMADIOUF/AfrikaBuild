@@ -176,12 +176,12 @@ p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+  background: rgba(255, 255, 255, 0.1);
   transition: left 0.4s ease-in-out;
 }
 
 .btn:hover::before {
-  left: 100%; /* Move the overlay from left to right on hover */
+  left: 100%; 
 }
 
 .title-home{
@@ -323,7 +323,6 @@ font-weight: 500;
 .slider-container {
   position: relative;
   width: 100%;
-  
   margin: auto;
   overflow: hidden;
   z-index: 2;
@@ -397,6 +396,7 @@ font-weight: 500;
 .img-top-hero {
   position: relative;
   animation: moveImage 3s ease-in-out infinite; 
+
 }
 
 @keyframes moveImage {
@@ -1136,4 +1136,196 @@ width: 100%;
 .testimonial-button:hover {
   background-color: var(--clr-primary-1);
   color: var(--clr-white);
+}
+@media (min-width:992px) {
+  .home-happy-customer-big-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+      animation: moveImage 3s ease-in-out infinite; 
+  
+  }
+}
+/* HomeTeam */
+.home-team-first-container{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.home-team-first-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.home-team-second-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-team-content {
+  background-color: #f4f4f4; /* Change to your preferred color */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* For positioning the phone number */
+  cursor: pointer;
+  transition: var(--transition);
+  overflow: hidden;
+  height: 600px;
+}
+.home-team-content:hover{
+  border: 2px solid var(--clr-primary-1);
+}
+
+.home-team-content-details {
+  text-align: center; /* Center align the text */
+}
+
+.home-team-icons  {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  
+}
+.home-team-icons button{
+  background-color: var(--clr-primary-5);
+  border-color: transparent;
+  color: var(--clr-black);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.home-team-icons button:hover{
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+
+.home-team-phone-number button {
+  
+ background-color:var(--clr-primary-1) ;
+ color: var(--clr-white);
+ border-color: transparent;
+ border-radius: 100%;
+ padding: 0.5rem;
+ font-size: 1.5rem;
+ cursor: pointer;
+}
+
+.phone-number {
+  display: none;
+position: absolute;
+bottom:20%;
+left: -3rem;
+}
+
+/* Show the phone number on hover */
+.home-team-phone-number:hover .phone-number {
+  display: block; 
+  text-orientation:sideways-right; /* Ensures characters are upright */
+  font-size: 24px; /* Adjust font size as needed */
+  color: var(--clr-black); /* Set your text color */
+  background-color: var(--clr-primary-5);
+  line-height: 1.5; /* Adjust line height for spacing */
+  transform: rotate(90deg); /* Optional: Rotate for bottom-to-top */
+}
+
+.home-team-img {
+  margin-top: 1rem; /* Space between text and image */
+position: absolute;
+top: 25%;
+right: 0;
+}
+
+.home-team-img img {
+   
+  width: 100%; /* Make images responsive */
+  border-radius: 50%; /* Make images circular */
+  height:auto;
+ 
+}
+@media (min-width:992px) {
+  .home-team-second-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+  }
+}
+/* Partenair */
+.partners {
+  padding: 2rem;
+  background: url("https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=600") center/cover no-repeat;
+  color: var(--clr-white);
+  text-align: center; 
+  margin-top: 5rem;
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Prevent overflow */
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute; /* Position overlay absolutely */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1; /* Place above the background */
+}
+
+.title-home-partners h3 {
+  color: var(--clr-white);
+}
+
+.partners-details {
+  max-width: 1200px; /* Max width for the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.title-home {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-bottom: 1.5rem; /* Space below the title */
+}
+
+.title-home h2 {
+  margin-right: 0.5rem; /* Space between icon and title */
+}
+
+.partners-slider {
+  overflow: hidden; /* Hide overflowing partners */
+}
+
+.partner-container {
+  display: flex; /* Align partners in a row */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  width: 100%; /* Full width for the slider */
+}
+
+.partner-item {
+  flex: 0 0 20%; /* Each partner takes 20% of the width (5 partners) */
+  margin: 0 1rem; /* Space between partner items */
+  display: flex; /* Align text center */
+  flex-direction: column; /* Stack image above text */
+  align-items: center; /* Center align items */
+}
+
+.partner-item img {
+  width: 100%; /* Responsive image width */
+  max-width: 120px; /* Max width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 0.5rem; /* Space between image and name */
+}
+
+.partner-item h4 {
+  font-size: 1rem; /* Adjust text size */
+  color: #333; /* Darker text color */
+  margin: 0; /* Remove default margin */
 }
