@@ -3,7 +3,7 @@ import React from 'react'
 const HomeServices = () => {
   return (
     <div className='home-services '>
-      <div className='home-services-container section-center'>
+      <div className='home-services-container '>
         <article>
           <div className='title-home'>
             <h2>
@@ -81,7 +81,8 @@ const HomeServices = () => {
           <div className='bg-services'></div>
         </article>
       </div>
-      <div className='home-services-contact section-center'>
+
+      <div className='home-services-contact '>
         <article className='home-services-contact-form'>
           <div className='title-home'>
             <h2>

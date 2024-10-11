@@ -46,17 +46,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={`/services`} onClick={handleLinkClick}>
+            <Link to={`/services`} onClick={scrollToTop}>
               Services
             </Link>
           </li>
           <li>
-            <Link to={`/projects`} onClick={handleLinkClick}>
+            <Link to={`/projects`} onClick={scrollToTop}>
               Projects
             </Link>
           </li>
           <li>
-            <Link to={`/contact`} onClick={handleLinkClick}>
+            <Link to={`/contact`} onClick={scrollToTop}>
               Contact
             </Link>
           </li>
