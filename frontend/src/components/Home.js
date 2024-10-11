@@ -6,6 +6,7 @@ import HomeProjects from '../pages/HomeProjects'
 import HomeHappyCustomer from '../pages/HomeHappyCustomer'
 import HomeTeam from '../pages/HomeTeam'
 import Partners from '../pages/Parteners'
+import HomeBlog from '../pages/HomeBlog'
 
 const Home = () => {
   return (
@@ -113,6 +114,8 @@ const Home = () => {
       <HomeHappyCustomer/>
       <HomeTeam/>
       <Partners/>
+      <HomeBlog/>
+      
     </div>
   )
 }

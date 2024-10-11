@@ -58,7 +58,7 @@ const Partners = () => {
 
   return (
     <div className='partners '>
-      <div className='overlay' />
+    
       <div className='title-home title-home-partners'>
         <h2>
           <img
