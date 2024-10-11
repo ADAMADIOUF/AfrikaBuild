@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import { FaEye } from 'react-icons/fa'
+import ProgressBar from './ProgressBar'
 
 const HomeProjects = () => {
   const projects = [
@@ -51,6 +52,7 @@ const HomeProjects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalIndex, setModalIndex] = useState(0)
 
+  // Automatic slideshow effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length)
@@ -59,8 +61,9 @@ const HomeProjects = () => {
     return () => clearInterval(interval) // Clear interval on component unmount
   }, [projects.length])
 
-  const handleImageClick = (index) => {
-    setModalIndex(index)
+  // Open modal gallery
+  const handleOpenGallery = (index) => {
+    setModalIndex(index) // Set the exact image to show in the modal
     setIsModalOpen(true)
   }
 
@@ -76,6 +79,20 @@ const HomeProjects = () => {
     setModalIndex(
       (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
     )
+  }
+
+  // Function to display three projects, and wrap around if necessary
+  const getVisibleProjects = () => {
+    if (currentIndex + 3 <= projects.length) {
+      // If there are still 3 images left to display
+      return projects.slice(currentIndex, currentIndex + 3)
+    } else {
+      // If we're near the end and need to wrap around
+      return [
+        ...projects.slice(currentIndex),
+        ...projects.slice(0, (currentIndex + 3) % projects.length),
+      ]
+    }
   }
 
   return (
@@ -94,33 +111,36 @@ const HomeProjects = () => {
 
       <div className='slider-gallery-home-projects'>
         <div className='project-slide'>
-          {projects
-            .slice(currentIndex, currentIndex + 3)
-            .map((project, index) => (
-              <div
-                className={`project ${index === 0 ? 'larger' : ''}`}
-                key={project.id}
-              >
-                <img
-                  src={project.imgSrc}
-                  alt={project.title}
-                  className='project-image'
-                  onClick={() => handleImageClick(project.id - 1)} // Pass project index
-                />
-                <div className='project-info'>
-                  <h4>{project.title}</h4>
-                  <p>{project.content}</p>
-                  <button className='explore-btn'>Explore Services</button>
-                </div>
+          {getVisibleProjects().map((project) => (
+            <div className={`project`} key={project.id}>
+              <img
+                src={project.imgSrc}
+                alt={project.title}
+                className='project-image'
+                onClick={() => handleOpenGallery(project.id - 1)} // Correct index from project array
+              />
+              <div className='button-container'>
+                <button
+                  className='open-gallery-btn'
+                  onClick={() => handleOpenGallery(project.id - 1)} // Open the correct image in the modal
+                >
+                  <FaEye />
+                </button>
               </div>
-            ))}
+              <div className='project-info'>
+                <h4>{project.title}</h4>
+                <p>{project.content}</p>
+                <button className='explore-btn'>Explore Services</button>
+              </div>
+            </div>
+          ))}
         </div>
+
         <div className='project-indicators'>
           {projects.map((_, index) => (
             <span
               key={index}
               className={`indicator ${currentIndex === index ? 'active' : ''}`}
-              onClick={() => handleImageClick(index)}
             ></span>
           ))}
         </div>
@@ -151,6 +171,7 @@ const HomeProjects = () => {
           </div>
         </div>
       )}
+      <ProgressBar />
     </div>
   )
 }

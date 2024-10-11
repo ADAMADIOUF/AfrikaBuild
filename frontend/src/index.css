@@ -886,6 +886,9 @@ clip-path: polygon(0 0, 75% 0%, 100% 0, 75% 100%, 0 99%);
 }
 }
 /* HomeProjects */
+.home-projects{
+  position:relative;
+}
 .slider-gallery-home-projects {
   position: relative;
   overflow: hidden;
@@ -982,11 +985,24 @@ clip-path: polygon(0 0, 75% 0%, 100% 0, 75% 100%, 0 99%);
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 30%;
+  right:38%;
   font-size: 30px;
   color: black;
   cursor: pointer;
+z-index:2;
+}
+.open-gallery-btn{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+background-color: var(--clr-white);
+color: var(--clr-primary-1);
+border-radius: 100%;
+border-color: transparent;
+font-size: 1.5rem;
+padding: 0.5rem;
+cursor: pointer;
 }
 
 .modal-buttons {
@@ -1003,4 +1019,121 @@ clip-path: polygon(0 0, 75% 0%, 100% 0, 75% 100%, 0 99%);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+ /* ProgressBar */
+ .progress-content{
+  margin-top: 5rem;
+ }
+ .progress-bar{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+ }
+ .progress-bar article h3{
+  font-size: 5rem;
+  color: var(--clr-primary-5);
+  font-weight: bold;
+ }
+ /* HomeHappyCustomer */
+ .home-happy-customer{
+  position: relative;
+  background: url("https://images.pexels.com/photos/1437493/pexels-photo-1437493.jpeg?auto=compress&cs=tinysrgb&w=600") center/cover no-repeat;
+width: 100%;
+  padding-top: 5rem;
+ }
+ .home-happy-customer-first-content {
+  position: relative;
+  background-color: var(--clr-primary-1);
+  padding: 1rem;
+  color: var(--clr-white);
+  z-index: 1;
+ height: 300px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+
+.home-happy-customer-first-content img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto; /* Change this to auto to maintain aspect ratio */
+  height: 100%; /* Make the image take the full height of the container */
+ 
+}
+
+ .home-happy-customer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+ /* Testimonail */
+ .testimonial-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.testimonial-content {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.quote-icon {
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #888; 
+  position: absolute;
+  top: 3rem;
+  right: 0;
+}
+
+.testimonial-author {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Center the image and author text */
+  justify-content: center; /* Center the content */
+}
+
+.testimonial-image {
+  width: 50px; /* Set image width */
+  height: 50px; /* Set image height */
+  border-radius: 100%; /* Make the image circular */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.testimonial-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--clr-primary-5);
+  color:var(--clr-primary-1);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.testimonial-button:hover {
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
 }
