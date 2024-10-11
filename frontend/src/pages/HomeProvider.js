@@ -25,7 +25,7 @@ const HomeProvider = () => {
           <h3>Work Process</h3>
         </div>
         <h3>Our services that we provide</h3>
-        <div className='home-provider-bg1'></div>
+        
         <div className='home-provider-video' onClick={handleVideoOpen}>
           <h3>Play Video</h3>
           <div>

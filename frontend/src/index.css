@@ -185,6 +185,7 @@ p {
 }
 
 .title-home{
+
   display:flex;
 align-items: center;
 gap: 1rem;
@@ -1611,4 +1612,109 @@ right: 0;
     opacity: 0;
     transform: translateY(20px); /* Optional: slide down effect */
   }
+}
+/* HeroScreen */
+.hero-screen {
+  height: 60vh; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white; /* Text color */
+  text-align: center;
+}
+.hero-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Position behind the text */}
+
+.hero-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* Optional: add a dark overlay for better text visibility */
+  padding: 20px;
+  border-radius: 10px; /* Optional: rounded corners */
+  z-index: 2;
+}
+
+.hero-links {
+position: absolute;
+bottom: 0;
+left: 5rem;
+z-index: 3;
+
+}
+
+.hero-link {
+  color: white; /* Link color */
+  text-decoration: none;
+  margin: 0 10px; /* Spacing between links */
+  padding: 10px 15px;
+  border: 1px solid var(--clr-white); /* Optional: border for links */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: background 0.3s, color 0.3s; /* Transition effects */
+  color: var(--clr-primary-1);
+  font-size: 1.5rem;
+}
+
+.hero-link:hover {
+  background: var(--clr-white); /* Change background on hover */
+  color: var(--clr-black); /* Change text color on hover */
+}
+/* AboutScreen */
+.about-container{
+  margin-top: 5rem;
+}
+.about-big-img{
+  margin-top: 2rem;
+}
+.about-second{
+  position: relative;
+}
+.about-second .about-big-img{
+  width: 100%;
+}
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about-progress-bar span{
+    font-size: 4rem;
+  }
+@media (min-width:992px) {
+  .about-second-bg {
+  position: absolute;
+  background-color: var(--clr-primary-1); /* Background color */
+  background-image: url('./assets//about.png'); /* Background image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-size: cover; /* Cover the entire area with the image */
+  background-position: center; /* Center the image */
+  
+  top: 50%;
+  left: -10rem;
+  height: 25rem;
+  width: 30rem;
+  padding: 3rem;
+  color: var(--clr-white);
+  border: 5px solid var(--clr-white);
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+.about-bg{
+  position: absolute;
+  top: 5rem;
+  left: -5rem;
+  background-color: var(--clr-primary-1);
+  width: 1rem;
+  height: 10rem;
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
 }

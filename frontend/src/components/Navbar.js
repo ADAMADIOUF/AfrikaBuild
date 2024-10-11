@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import { FaBars, FaPhone, FaTimes } from 'react-icons/fa'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   const toggleNavbar = () => {
-    setOpen(!open) 
+    setOpen(!open)
+  }
+
+  const handleLinkClick = () => {
+    setOpen(false) // Close the navbar
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }) // Scroll to the top
+    handleLinkClick() // Close the mobile menu
   }
 
   return (
@@ -13,7 +23,9 @@ const Navbar = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           <div className='logo'>
-            <h3> 🇸🇳 Africa Build</h3>
+            <Link to={`/`} onClick={scrollToTop}>
+              <h3> 🇸🇳 Africa Build</h3>
+            </Link>
           </div>
           <div className='menu'>
             <button onClick={toggleNavbar} className='btn-nav'>
@@ -24,19 +36,29 @@ const Navbar = () => {
 
         <ul className={`nav-links ${open ? 'show' : ''}`}>
           <li>
-            <a href=''>Home</a>
+            <Link to={`/`} onClick={scrollToTop}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href=''>About</a>
+            <Link to={`/about`} onClick={scrollToTop}>
+              About
+            </Link>
           </li>
           <li>
-            <a href=''>Services</a>
+            <Link to={`/services`} onClick={handleLinkClick}>
+              Services
+            </Link>
           </li>
           <li>
-            <a href=''>Projects</a>
+            <Link to={`/projects`} onClick={handleLinkClick}>
+              Projects
+            </Link>
           </li>
           <li>
-            <a href=''>Contact</a>
+            <Link to={`/contact`} onClick={handleLinkClick}>
+              Contact
+            </Link>
           </li>
         </ul>
         <div className='nav-contact'>
@@ -47,7 +69,7 @@ const Navbar = () => {
           </div>
           <div>
             <p>
-              <span>call us any time</span>
+              <span>Call us any time</span>
             </p>
             <h3>+221 778581776</h3>
           </div>

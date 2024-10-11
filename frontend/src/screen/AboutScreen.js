@@ -1,50 +1,42 @@
-import React, { useEffect } from 'react'
-import HomeServices from '../pages/HomeServices'
+import React, { useEffect, useState } from 'react'
+import HeroScreen from './HeroScreen'
+import { GoArrowUpRight } from 'react-icons/go'
+import CountUp from 'react-countup'
+
+import ScrollTrigger from 'react-scroll-trigger'
 import HomeChoose from '../pages/HomeChoose'
 import HomeProvider from '../pages/HomeProvider'
 import HomeProjects from '../pages/HomeProjects'
-import HomeHappyCustomer from '../pages/HomeHappyCustomer'
 import HomeTeam from '../pages/HomeTeam'
 import Partners from '../pages/Parteners'
-import HomeBlog from '../pages/HomeBlog'
-import Hero from './Hero'
-import TopHero from './TopHero'
-import { GoArrowUpRight } from 'react-icons/go'
+const AboutScreen = () => {
+ const [count, setCount] = useState(false)
 
-const Home = () => {
-  useEffect(() => {
-    window.scroll({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }, [])
+ useEffect(() => {
+   const loadingTimer = setTimeout(() => {
+     setCount(true)
+   }, 2000)
+
+   return () => {
+     clearTimeout(loadingTimer)
+   }
+ }, [])
+ useEffect(() => {
+   window.scroll({
+     top: 0,
+     behavior: 'smooth',
+   })
+ }, [])
   return (
-    <div className='home-page'>
-      <Hero />
-      <div className='about-home section-center'>
-        <TopHero />
-        <div className='about-home-container'>
-          <article className='first-img'>
-            <div className='big-img'>
-              <img
-                src='https://images.pexels.com/photos/7937366/pexels-photo-7937366.jpeg?auto=compress&cs=tinysrgb&w=600'
-                alt=''
-              />
-            </div>
-            <div className='bg'>
-              <h3>1.2k</h3>
-              <p>happy customers</p>
-              <h2>/////////////</h2>
-              <h2>/////////////////////////////</h2>
-              <h2>/////////////</h2>
-              <img
-                src='https://html.favdevs.com/construz/demo/assets/img/normal/client_group_1-1.png'
-                alt=''
-                className='smal-img'
-              />
-            </div>
-            <div className='second-bg'></div>
-          </article>
+    <div className='about'>
+      <HeroScreen
+        title='Welcome to Africa Build'
+        imageUrl='https://images.pexels.com/photos/28879436/pexels-photo-28879436/free-photo-of-lush-greenhouse-architecture-with-sunlight.jpeg?auto=compress&cs=tinysrgb&w=600'
+        homeLink='/'
+        aboutLink='/about'
+      />
+      <div className='about-details section-center'>
+        <div className='about-container'>
           <article className='home-content'>
             <div className='title-home'>
               <h2>
@@ -112,24 +104,45 @@ const Home = () => {
               explore our company <GoArrowUpRight />
             </button>
           </article>
-          <article className='home-img'>
+          <article className='about-second'>
             <img
-              src='https://html.favdevs.com/construz/demo/assets/img/normal/about_shape_1-2.png'
+              src='https://html.favdevs.com/construz/demo/assets/img/normal/about_2-1.png'
               alt=''
+              className='about-big-img'
             />
+            <div className='about-bg'></div>
+            <div className='about-second-bg'>
+              <img
+                src='https://html.favdevs.com/construz/demo/assets/img/hero/hero_experience_wrap_icon_1_1.png'
+                alt=''
+              />
+              <div>
+                <ScrollTrigger
+                  onEnter={() => setCount(true)}
+                  onExit={() => setCount(false)}
+                >
+                  <article className='about-progress-bar'>
+                    <h3>
+                      {count && (
+                        <CountUp start={0} end={40} duration={2} delay={0} />
+                      )}
+                      +
+                    </h3>
+                    <span>Business Experience</span>
+                  </article>
+                </ScrollTrigger>
+              </div>
+            </div>
           </article>
         </div>
+        <HomeChoose />
       </div>
-      <HomeServices />
-      <HomeChoose />
       <HomeProvider />
       <HomeProjects />
-      <HomeHappyCustomer />
-      <HomeTeam />
-      <Partners />
-      <HomeBlog />
+      <HomeTeam/>
+      <Partners/>
     </div>
   )
 }
 
-export default Home
+export default AboutScreen
