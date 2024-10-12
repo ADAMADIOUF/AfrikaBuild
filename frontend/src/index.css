@@ -1624,6 +1624,7 @@ right: 0;
   position: relative;
   color: white; /* Text color */
   text-align: center;
+
 }
 .hero-screen::before {
   content: '';
@@ -1934,4 +1935,114 @@ transition: var(--transition);
   .testimonial-item {
     flex: 0 0 33.33%; /* 3 items in a row */
   }
+}
+/* ContactForm Styles */
+.contact-form-container {
+  background: url("https://images.pexels.com/photos/8837715/pexels-photo-8837715.jpeg?auto=compress&cs=tinysrgb&w=600") center/cover no-repeat;
+  display: flex;
+  padding: 20px; /* Add padding around the container */
+  gap: 2rem; /* Space between image and form */
+}
+
+.contact-form-img {
+  flex: 2; /* Image takes 1/3 of the space */
+}
+
+.contact-form-img img {
+  width: 100%; /* Make the image responsive */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.contact-form {
+  flex: 3; /* Form takes 2/3 of the space */
+}
+
+.contact-form h2 {
+  color: var(--clr-primary-1);
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 1rem; /* Add padding to the bottom */
+}
+
+.contact-form h3 {
+  margin-top: 1rem;
+  color: var(--clr-white);
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  gap: 1rem; /* Space between inputs and button */
+}
+
+.form-contact div {
+  display: flex; /* Align items in a row */
+  flex-wrap: wrap; /* Allow wrapping of inputs */
+  gap: 1rem; /* Space between inputs */
+}
+
+.form-contact input,
+.form-contact textarea {
+  flex: 1; /* Make inputs and textareas take available space */
+  min-width: 200px; /* Ensure a minimum width */
+  padding: 0.75rem; /* Padding inside inputs */
+  margin: 0; /* Remove margin for consistent spacing */
+  border: 1px solid #ccc; /* Add border for inputs */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.form-contact textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+  min-height: 100px; /* Set a minimum height for the textarea */
+}
+
+.btn-contact {
+  width: 100%; /* Full width for the button */
+  padding: 0.75rem; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: var(--clr-primary-1); /* Button background color */
+  color: #fff; /* Button text color */
+  font-size: 1rem; /* Button text size */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.btn-contact:hover {
+  background-color: var(--clr-primary-2); /* Change color on hover */
+}
+/* ContactScreen */
+
+.margin-top{
+  margin-top: 5rem;
+}
+.office-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.office-card {
+  flex: 1 1 300px; /* Flex basis for cards */
+  border: 1px solid #ccc; /* Border for cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px; /* Space between cards */
+  background-color: #fff; /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.office-card img {
+  width: 100%; /* Responsive image */
+  border-radius: 8px; /* Rounded corners */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.office-card h2 {
+  color: var(--clr-primary-1);
+  margin-bottom: 10px;
+}
+
+.office-card p {
+  margin: 5px 0; /* Space between paragraphs */
 }

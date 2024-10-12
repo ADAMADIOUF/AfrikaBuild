@@ -50,11 +50,7 @@ const Navbar = () => {
               Services
             </Link>
           </li>
-          <li>
-            <Link to={`/projects`} onClick={scrollToTop}>
-              Projects
-            </Link>
-          </li>
+          
           <li>
             <Link to={`/contact`} onClick={scrollToTop}>
               Contact

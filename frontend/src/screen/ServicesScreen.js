@@ -188,9 +188,9 @@ const ServicesScreen = () => {
           <h3>What client saying about us</h3>
         </div>
         <Testimonials />
-      <Partenairs/>
-      <ContactForm/>
+        <Partenairs />
       </div>
+      <ContactForm />
     </div>
   )
 }
