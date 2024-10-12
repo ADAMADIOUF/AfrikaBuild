@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className='nav-header'>
           <div className='logo'>
             <Link to={`/`} onClick={scrollToTop}>
-              <h3> 🇸🇳 Africa Build</h3>
+              <h3> 🌍 Africa Build</h3>
             </Link>
           </div>
           <div className='menu'>
@@ -50,7 +50,7 @@ const Navbar = () => {
               Services
             </Link>
           </li>
-          
+
           <li>
             <Link to={`/contact`} onClick={scrollToTop}>
               Contact

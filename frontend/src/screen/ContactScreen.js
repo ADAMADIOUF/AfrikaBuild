@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroScreen from './HeroScreen'
 import ContactForm from '../pages/ContactForm'
 import Map from '../components/Map'
 
 const ContactScreen = () => {
+ useEffect(() => {
+   window.scroll({
+     top: 0,
+     behavior: 'smooth',
+   })
+ }, [])
   return (
     <div className='contact'>
       <HeroScreen

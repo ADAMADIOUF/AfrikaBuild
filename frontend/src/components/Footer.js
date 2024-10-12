@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='footer-first-container'>
           <article>
             <div className='logo'>
-              <h3> 🇸🇳 Africa Build</h3>
+              <h3> 🌍 Africa Build</h3>
             </div>
           </article>
           <article className='footer-subscribe'>
@@ -155,10 +155,7 @@ const Footer = () => {
               <li> Terms & Condition</li>
 
               <li> Privacy Policy</li>
-              <li>
-                {' '}
-               Contact Us
-              </li>
+              <li> Contact Us</li>
             </ul>
           </article>
         </div>
