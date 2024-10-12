@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import HeroScreen from './HeroScreen'
+import Testimonials from '../components/Testimonials'
+import Partenairs from '../components/Partenairs'
+import ContactForm from '../pages/ContactForm'
 
 
 const ServicesScreen = () => {
@@ -118,7 +121,7 @@ const ServicesScreen = () => {
           <article className='services-content'>
             <div className='services-content-container'>
               <article>
-                <div>
+                <div className='services-item'>
                   <span>01</span>
                   <div className='bg-servives'></div>
                 </div>
@@ -131,7 +134,7 @@ const ServicesScreen = () => {
                 </div>
               </article>
               <article>
-                <div>
+                <div className='services-item'>
                   <span>02</span>
                   <div className='bg-servives'></div>
                 </div>
@@ -144,7 +147,7 @@ const ServicesScreen = () => {
                 </div>
               </article>
               <article>
-                <div>
+                <div className='services-item'>
                   <span>03</span>
                   <div className='bg-servives'></div>
                 </div>
@@ -157,7 +160,7 @@ const ServicesScreen = () => {
                 </div>
               </article>
               <article>
-                <div>
+                <div className='services-item'>
                   <span>04</span>
                   <div className='bg-servives'></div>
                 </div>
@@ -172,6 +175,21 @@ const ServicesScreen = () => {
             </div>
           </article>
         </div>
+        <div className='services-testimonial section-center'>
+          <div className='title-home'>
+            <h2>
+              <img
+                src='https://html.favdevs.com/construz/demo/assets/img/icon/section-subtitle-icon.svg'
+                alt=''
+              />
+            </h2>
+            <h3>Testimonials</h3>
+          </div>
+          <h3>What client saying about us</h3>
+        </div>
+        <Testimonials />
+      <Partenairs/>
+      <ContactForm/>
       </div>
     </div>
   )
