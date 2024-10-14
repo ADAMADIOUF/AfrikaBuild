@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaPhone, FaTimes } from 'react-icons/fa'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -10,12 +10,12 @@ const Navbar = () => {
   }
 
   const handleLinkClick = () => {
-    setOpen(false) // Close the navbar
+    setOpen(false) 
   }
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }) // Scroll to the top
-    handleLinkClick() // Close the mobile menu
+    window.scrollTo({ top: 0, behavior: 'smooth' }) 
+    handleLinkClick() 
   }
 
   return (

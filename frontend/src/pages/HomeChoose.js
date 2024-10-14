@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeChoose = () => {
   return (
-    <div className='home-choose'>
+    <div className='home-choose '>
       <div className='home-choose-details section-center'>
         <div className='home-choose-big-text'>
           <h2>why choose us</h2>
