@@ -1,4 +1,4 @@
-import asyncHandler from '../middleware/asyncHandler.js'
+import asyncHandler from '../middleware/asynchandler.js'
 import Contact from '../models/Contact.js'
 
 const contactFormData = asyncHandler(async (req, res) => {
