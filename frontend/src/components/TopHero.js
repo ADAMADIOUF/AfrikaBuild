@@ -9,14 +9,14 @@ const TopHero = () => {
       <div className='img-top-hero'>
         <img src={hero} alt='' />
       </div>
-      <div className='top-second-img'>
-        <img src={hero2} alt='' />
+      <div className='top-second'>
+        <img src={hero2} alt='' className='top-second-img' />
         <div className='overlay'></div>
         <div className='shape top-left'></div>
         <div className='shape bottom-right'></div>
         <div className='top'>
           {' '}
-          <img src={top} alt=''  />
+          <img src={top} alt='' />
         </div>
         <h2 className='hero-title'>
           <FaHSquare className='hero-icon' />

@@ -414,7 +414,9 @@ gap: 1rem;
   animation: moveImage 3s ease-in-out infinite; 
 
 }
-
+.img-top-hero img{
+  width: 100%;
+}
 @keyframes moveImage {
   0% {
     transform: translateX(0);
@@ -428,16 +430,14 @@ gap: 1rem;
 }
 
 .top-second-img {
+  width: 100%;
   position: absolute;
   top: -20%;
   left: 50%; 
   overflow: hidden; 
 }
 
-.top-second-img img {
-  width: 100%; /* Ensure it fits the container */
-  height: auto; /* Maintain aspect ratio */
-}
+
 
 .overlay {
   position: absolute;
@@ -581,7 +581,7 @@ gap: 1rem;
 /* HomeServices */
 .home-services {
   position: relative;
-  margin-top: 15rem;
+  margin-top: 5rem;
   background: url("https://images.pexels.com/photos/1437493/pexels-photo-1437493.jpeg?auto=compress&cs=tinysrgb&w=600") center/cover no-repeat;
   
 }
@@ -597,8 +597,12 @@ gap: 1rem;
   cursor: pointer;
   transition: var(--transition);
 margin: 1rem;
+z-index: 3;
 }
-
+.home-services-content h3{
+  z-index: 4;
+  position: relative;
+}
 .home-services-content:hover {
   border: 2px solid var(--clr-primary-1);
 }
@@ -624,18 +628,38 @@ margin: 1rem;
   left: 0.5rem; /* Position it on the left side */
   transform: translateY(-50%) rotate(180deg); /* Center vertically and rotate */
   letter-spacing: 0.1rem; /* Add some spacing between letters */
+  z-index: 1;
 }
 
 .bg-services {
   position: absolute;
   top: 0;
   left: 40%;
-  width: 20%;
-  height: 30%;
-  border-radius: 100%;
-  background-color:var(--clr-primary-bg);
+  width: 20%; /* Width can be adjusted for different screen sizes */
+  height: 30%; /* Height can be adjusted for different screen sizes */
+  border-radius: 50%; /* Use 50% for a perfect circle */
+  background-color: var(--clr-primary-bg);
   z-index: 1; /* Send it behind the content */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
 }
+
+/* Optional: Adjust sizes for different screen sizes */
+@media (max-width: 768px) {
+  .bg-services {
+    width: 40%; /* Increase width for mobile */
+    height: 40%; /* Increase height for mobile */
+    left: 30%; /* Adjust left positioning if needed */
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-services {
+    width: 20%; /* Reset to original size for larger screens */
+    height: 30%; /* Reset to original size for larger screens */
+    left: 40%; /* Original left position */
+  }
+}
+
 .home-services-contact{
   margin-top: 5rem;
 }
