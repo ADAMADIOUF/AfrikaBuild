@@ -11,21 +11,17 @@ dotenv.config()
 // Connect to the database
 connectDB()
 
-// Get the current directory name
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
 // Set up the Express application
 const port = process.env.PORT || 5000
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '../frontend/build')))
 
-// API route
+
 app.use('/api/form/contact', contactRoute)
 
-// Serve static files and define fallback route for React app
+const __dirname = path.resolve()
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/build')))
   app.get('*', (req, res) =>
