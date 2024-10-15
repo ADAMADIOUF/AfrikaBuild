@@ -67,7 +67,9 @@ const Navbar = () => {
             <p>
               <span>Call us any time</span>
             </p>
-            <h3>+221 778581776</h3>
+            <h3>
+              <a href='tel:+221778581776'>+221 778581776</a>
+            </h3>
           </div>
         </div>
       </div>

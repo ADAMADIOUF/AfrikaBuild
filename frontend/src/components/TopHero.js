@@ -15,8 +15,8 @@ const TopHero = () => {
         <div className='shape top-left'></div>
         <div className='shape bottom-right'></div>
         <div className='top'>
-          {' '}
-          <img src={top} alt='' />
+         
+          <img src={top} alt='' className='top-img' />
         </div>
         <h2 className='hero-title'>
           <FaHSquare className='hero-icon' />

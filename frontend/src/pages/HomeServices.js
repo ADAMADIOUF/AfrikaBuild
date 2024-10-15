@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import ContactOne from '../screen/ContactOne'
 
 const HomeServices = () => {
   return (
@@ -29,7 +31,9 @@ const HomeServices = () => {
           />
           <h3>General construction</h3>
           <p>There are many passages of lorem ipsum available</p>
-          <button className='btn home-services-btn'>explore service</button>
+          <Link to={`/services`}>
+            <button className='btn home-services-btn'>explore service</button>
+          </Link>
           <div className='bg-services'></div>
         </article>
         <article className='home-services-content'>
@@ -41,7 +45,9 @@ const HomeServices = () => {
           />
           <h3>Property maintenance</h3>
           <p>There are many passages of lorem ipsum available</p>
-          <button className='btn home-services-btn'>explore service</button>
+          <Link to={`/services`}>
+            <button className='btn home-services-btn'>explore service</button>
+          </Link>
           <div className='bg-services'></div>
         </article>
         <article className='home-services-content'>
@@ -53,7 +59,9 @@ const HomeServices = () => {
           />
           <h3>Project management</h3>
           <p>There are many passages of lorem ipsum available</p>
-          <button className='btn home-services-btn'>explore service</button>
+          <Link to={`/services`}>
+            <button className='btn home-services-btn'>explore service</button>
+          </Link>
           <div className='bg-services'></div>
         </article>
         <article className='home-services-content'>
@@ -65,7 +73,9 @@ const HomeServices = () => {
           />
           <h3>Virtual design & build</h3>
           <p>There are many passages of lorem ipsum available</p>
-          <button className='btn home-services-btn'>explore service</button>
+          <Link to={`/services`}>
+            <button className='btn home-services-btn'>explore service</button>
+          </Link>
           <div className='bg-services'></div>
         </article>
         <article className='home-services-content'>
@@ -77,7 +87,9 @@ const HomeServices = () => {
           />
           <h3>Proconstruction</h3>
           <p>There are many passages of lorem ipsum available</p>
-          <button className='btn home-services-btn'>explore service</button>
+          <Link to={`/services`}>
+            <button className='btn home-services-btn'>explore service</button>
+          </Link>
           <div className='bg-services'></div>
         </article>
       </div>
@@ -94,12 +106,7 @@ const HomeServices = () => {
             <h3>GET FREE QUOT</h3>
           </div>
           <h3>Have a project in mind?</h3>
-          <form className='form-home-services'>
-            <input type='text' placeholder='full name' />
-            <input type='text' placeholder='email address' />
-            <input type='text' placeholder='your inquiry' />
-            <button className='btn-contact btn'>submit now </button>
-          </form>
+          <ContactOne/>
         </article>
         <article className='homeservices-contact-img'>
           <img

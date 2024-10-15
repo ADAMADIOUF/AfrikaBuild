@@ -9,7 +9,7 @@ import Partners from '../pages/Parteners'
 import HomeBlog from '../pages/HomeBlog'
 import Hero from './Hero'
 import TopHero from './TopHero'
-import { GoArrowUpRight } from 'react-icons/go'
+
 
 const Home = () => {
   useEffect(() => {

@@ -288,19 +288,55 @@ gap: 1rem;
     justify-content: space-around;
     align-items: center;
   }
-  .nav-contact{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .nav-contact button{
-    background-color: var(--clr-primary-1);
-    color: var(--clr-white);
-    padding: 0.55rem;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+  .nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Add some spacing between icon and text */
+  
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  
+}
+
+.nav-contact button {
+  background-color: var(--clr-primary-1); /* Your primary color */
+  color: var(--clr-white);
+  padding: 0.75rem;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%; /* Make button circular */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-contact button:hover {
+  background-color: var(--clr-primary-2); /* Change to a secondary shade on hover */
+}
+
+.nav-contact p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--clr-gray); /* Lighter gray for text */
+}
+
+.nav-contact h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-contact h3 a {
+  color: var(--clr-primary-1); /* Phone number color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-contact h3 a:hover {
+  color: var(--clr-primary-2);
+}
+
 }
 /* Hero */
 .hero {
@@ -405,7 +441,7 @@ gap: 1rem;
 }
 .top-hero {
   position: relative;
-  margin-top: -5rem;
+  margin-top: 5rem;
   overflow: hidden; 
 }
 
@@ -428,13 +464,17 @@ gap: 1rem;
     transform: translateX(0); 
   }
 }
-
-.top-second-img {
-  width: 100%;
+.top-second-img{
+   width: 100%;
+}
+@media (min-width:992px) {
+  .top-second-img {
+ 
   position: absolute;
-  top: -20%;
-  left: 50%; 
+  top: 0%;
+  left: 40%; 
   overflow: hidden; 
+}
 }
 
 
@@ -486,7 +526,7 @@ gap: 1rem;
   color: white; /* Change icon color as needed */
 }
 .top img{
-  width: 200px;
+  width: 100px;
 }
 /* HomePage */
 .about-home{
@@ -614,20 +654,20 @@ z-index: 3;
 .home-services-img {
   position: relative;
   z-index: 2;
-  transition: transform 0.6s ease; /* Smooth transition for the flip */
-  transform: rotateY(0); /* Default state, no flip */
+  transition: transform 0.6s ease; 
+  transform: rotateY(0); 
 }
 
 .vertical-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 2.5rem; /* Adjust font size to fit better */
+  font-size: 2.5rem; 
   color:var(--clr-primary-5);
-  position: absolute; /* Position the vertical text absolutely */
-  top: 50%; /* Adjust vertically */
-  left: 0.5rem; /* Position it on the left side */
-  transform: translateY(-50%) rotate(180deg); /* Center vertically and rotate */
-  letter-spacing: 0.1rem; /* Add some spacing between letters */
+  position: absolute; 
+  top: 50%; 
+  left: 0.5rem; 
+  transform: translateY(-50%) rotate(180deg); 
+  letter-spacing: 0.1rem; 
   z-index: 1;
 }
 
@@ -635,30 +675,24 @@ z-index: 3;
   position: absolute;
   top: 0;
   left: 40%;
-  width: 20%; /* Width can be adjusted for different screen sizes */
-  height: 30%; /* Height can be adjusted for different screen sizes */
-  border-radius: 50%; /* Use 50% for a perfect circle */
+  width: 20%; 
+  height: 30%; 
+  border-radius: 50%;
   background-color: var(--clr-primary-bg);
-  z-index: 1; /* Send it behind the content */
-  transition: all 0.3s ease; /* Smooth transition for any changes */
+  z-index: 1; 
+  transition: all 0.3s ease; 
 }
 
-/* Optional: Adjust sizes for different screen sizes */
+
 @media (max-width: 768px) {
   .bg-services {
-    width: 40%; /* Increase width for mobile */
-    height: 40%; /* Increase height for mobile */
+    width: 20%; /* Increase width for mobile */
+    height: 20%; /* Increase height for mobile */
     left: 30%; /* Adjust left positioning if needed */
   }
 }
 
-@media (min-width: 992px) {
-  .bg-services {
-    width: 20%; /* Reset to original size for larger screens */
-    height: 30%; /* Reset to original size for larger screens */
-    left: 40%; /* Original left position */
-  }
-}
+
 
 .home-services-contact{
   margin-top: 5rem;
